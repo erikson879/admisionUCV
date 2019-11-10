@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Proyecto Sistemas Distribuidos</title>font-size: 2em;
+    font-weight: bold;
+    color: #171414;   
+    <link type="text/css" rel="stylesheet" href="bootstrap.min.css">
+    <!--<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">-->
+    <!--<link rel="icon" href="/favicon.ico" type="image/x-icon">-->
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="mi.js"></script>
+</head>
+<body>
+    <div class="card container">
+        <div class="card-body" style="padding: 1em 0em;">
+            <div class="card bg-light mb-12" style="">
+              <div class="card-header"><strong>Tiempo restante</strong></br><a id="timer" class="timer" style="font-size: 2em;
+    font-weight: bold;
+    color: #171414;">Tiempo restante</a></div>
+              <div class="card-body">
+                <h5 class="card-title">Examen de admision Universidad Central de Venezuela</h5>
+                <p class="card-text">El objetivo de esta prueba es comprobar sus conocimientos en temas comprendidos en el area de estudio.</p>
+              </div>
+        </div>
+    </div>
+    <div class="card container">
+        <div class="card-body">
+            <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1"><strong>1.</strong> primera pregunta</label>
+    <select class="custom-select">
+      <option selected disabled=""> Seleccione una respuesta</option>
+      <option value="1">Respuesta</option>
+      <option value="2">Respuesta</option>
+      <option value="3">Respuesta</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1"><strong>2.</strong> segunda pregunta</label>
+    <select class="custom-select">
+      <option selected disabled=""> Seleccione una respuesta</option>
+      <option value="1">Respuesta</option>
+      <option value="2">Respuesta</option>
+      <option value="3">Respuesta</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1"><strong>3.</strong> tercera pregunta</label>
+    <select class="custom-select">
+      <option selected disabled=""> Seleccione una respuesta</option>
+      <option value="1">Respuesta</option>
+      <option value="2">Respuesta</option>
+      <option value="3">Respuesta</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1"><strong>4.</strong> cuarta pregunta</label>
+    <select class="custom-select">
+      <option selected disabled=""> Seleccione una respuesta</option>
+      <option value="1">Respuesta</option>
+      <option value="2">Respuesta</option>
+      <option value="3">Respuesta</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1"><strong>5.</strong> quinta pregunta</label>
+    <select class="custom-select">
+      <option selected disabled=""> Seleccione una respuesta</option>
+      <option value="1">Respuesta</option>
+      <option value="2">Respuesta</option>
+      <option value="3">Respuesta</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar para calificar</button>
+</form>        
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    var d = new Date();
+    var n = d.getMinutes();
+    var start = new Date;
+    var segundos = '00';
+    var minu = 00;
+    window.setInterval(function yourfunction(){ 
+    console.log(n);
+    minu = parseInt(((new Date - start) / 1000)/60);
+    var afueraTemp = ((parseInt(minu) >= 1) ? segundos : parseInt((parseInt((new Date - (start))) / 1000)));
+    if (parseInt(afueraTemp) <= 60){
+        segundos = afueraTemp;
+    }
+    console.log("afuera "+ segundos);
+    if (parseInt(minu) > 0){
+        var adentroTemp = parseInt((parseInt((new Date - (start))) / 1000))-(60*(parseInt(parseInt((parseInt((new Date - (start))) / 1000)))%(parseInt(minu)+1)));
+        if(parseInt(adentroTemp) <= 60 ){
+            segundos = parseInt(adentroTemp);    
+        }
+        console.log((60*(parseInt(parseInt((parseInt((new Date - (start))) / 1000)))%parseInt(minu))));
+        console.log("adentro "+ segundos);
+    }
+    $('#timer').text(minu+":"+segundos + " Seconds") },500);    
+    if (minu =3){
+
+    }else if(minu > 3 ){
+        alert('Boommmm!');
+    }
+</script>

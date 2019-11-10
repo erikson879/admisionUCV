@@ -1,0 +1,22 @@
+#Dockerfile
+# Use ultima version de la imagen postgres image as the base
+FROM postgres
+
+# ejecutar el siguiente comando para crear el container
+docker run --name <nombre-container> -e POSTGRES_PASSWORD=secret -d <nombre de imagen postgres>
+
+
+
+#para conectar utilizar el siguiente comando 
+docker exec -it docker psql postgres postgres 
+
+#una vez conectado a postgres como postgres 
+#es necesario crear la base de datos sistemadistribuido
+CREATE DATABASE sistemadistribuido;
+
+#proximo a esto es necesario conectar a ese bases de datos
+\c sistemadistribuido;
+
+# ejecutar los script de los archivos adjuntos con extencion .sql
+# es necesario copiar el contenido y pegarlo en la consola de psql
+# usuarios.sql y db.sql

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Proyecto Sistemas Distribuidos</title>   
+    <link type="text/css" rel="stylesheet" href="bootstrap.min.css">
+    <!--<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">-->
+    <!--<link rel="icon" href="/favicon.ico" type="image/x-icon">-->
+</head>
+<body >
+    <div class="card container">
+            <form method="post" action="formulario"class="form-group" >
+        <div class="class="card bg-light mb-12">
+            <label class="text-label-principal" style="font-size: 2em;font-weight: bold;">REGISTRO DE BACHILLER ASPIRANTE</label>
+        </div>
+        <div class="form-row">
+            <div class="form-row col-md-3 item-div">
+                <label class="col-md-12 item-label" for="nombre1" style="font-weight: bold;margin-bottom: 0em;">Primer Nombre</label>
+                <input type="text" class="form-control form-control-sm"  id="nombre1" name="nombre1" placeholder="Ingrese primer nombre"
+                    required>
+            </div>
+            <div class="form-row col-md-3 item-div">
+                <label class="col-md-12 item-label" for="nombre2" style="font-weight: bold;margin-bottom: 0em;">Segundo Nombre</label>
+                <input type="text" class="form-control form-control-sm" id="nombre2" name="nombre2"
+                    placeholder="Ingrese segundo nombre">
+            </div>
+            <div class="form-row col-md-3 item-div">
+                <label class="col-md-12 item-label" for="apellido1" style="font-weight: bold;margin-bottom: 0em;">Primer Apellido</label>
+                <input type="text" class="form-control form-control-sm" id="apellido1" name="apellido1"
+                    placeholder="Ingrese primer apellido" required>
+            </div>
+            <div class="form-row col-md-3 item-div">
+                <label class="col-md-12 item-label" for="apellido2" style="font-weight: bold;margin-bottom: 0em;">Segundo Apellido</label>
+                <input type="text" class="form-control form-control-sm" id="apellido2" name="apellido2"
+                    placeholder="Ingrese segundo apellido">
+            </div>
+            <div class="form-row col-md-3 item-div">
+                <label for="codigo_identificacion" class="col-md-12 item-label" style="font-weight: bold;margin-bottom: 0em;">Identificaci&oacute;n</label>
+                <select class="form-control col-md-2 form-control-sm" id="codigo_identificacion" name="codigo_identificacion" required>
+                    <option value="-1" selected disabled>-</option>
+                    <option value="V" >Venezolano</option>
+                    <option value="E" >Extranjero</option>
+                    <option value="P" >Pasaporte</option>
+                </select>
+                <input type="text" class="form-control col-md-10 form-control-sm" id="identificacion" name="identificacion"
+                    placeholder="Identificacion" type="number" required>
+            </div>
+            <div class="form-row col-md-3 item-div">
+                <label for="fecha_nacimiento" class="col-md-12 item-label" style="font-weight: bold;margin-bottom: 0em;">Fecha de nacimiento</label>
+                <input type="date" class="form-control col-md-12 form-control-sm" id="fecha_nacimiento" name="fecha_nacimiento"
+                    required>
+            </div>
+            <div class="form-row col-md-2 item-div">
+                <label for="pais_nacimiento" class="col-md-12 item-label" style="font-weight: bold;margin-bottom: 0em;">Pais de nacimiento</label>
+                <input type="text" class="form-control col-md-12 form-control-sm" id="pais_nacimiento"
+                    name="pais_nacimiento" required>
+            </div>
+            <div class="form-row col-md-1 item-div">
+                <label for="sexo" class="col-md-12 item-label" style="font-weight: bold;margin-bottom: 0em;">Sexo</label>
+                <select class="form-control col-md-12 form-control-sm" id="sexo" name="sexo" required>
+                    <option value="-1" selected disabled>-</option>
+                    <option value="M" >Masculino</option>
+                    <option value="F" >Femenino</option>
+                </select>
+            </div>
+            <div class="form-row col-md-3 item-div">
+                <label for="fecha_graduacion_bachiller" class="col-md-12 item-label" style="font-weight: bold;margin-bottom: 0em;">Fecha de graduacion</label>
+                <input type="date" class="form-control col-md-12 form-control-sm" id="fecha_graduacion_bachiller"
+                    name="fecha_graduacion_bachiller" onchage=prueba()>
+            </div>
+            <div class="item-div button-div center-block" style="margin-top: .5em;display: inline;">
+                <button type="submit" class="btn btn-primary form-control-sm">Enviar Solicitud</button>
+                <button type="reset" class="btn btn-primary form-control-sm">Limpiar Campos</button>
+            </div>
+        </div>
+    </form>    
+
+
+
+
+    </div>
+    
+</body>
+
+</html>
