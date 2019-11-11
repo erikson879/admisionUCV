@@ -240,29 +240,37 @@ if __name__ == '__main__':
                                 var d = new Date();
                                 var n = d.getMinutes();
                                 var start = new Date;
-                                var segundos = '00';
+                                var segundos = 00;
                                 var minu = 00;
+                                var minuto = 0; 
+                                var segg = d.getSeconds();
                                 window.setInterval(function yourfunction(){ 
-                                console.log(n);
+                                //console.log('n '+n);
                                 minu = parseInt(((new Date - start) / 1000)/60);
-                                var afueraTemp = ((parseInt(minu) >= 1) ? segundos : parseInt((parseInt((new Date - (start))) / 1000)));
-                                if (parseInt(afueraTemp) <= 60){
-                                    segundos = afueraTemp;
+                                //console.log('minu '+minu);
+                                var ds = new Date();
+                                var seg = ds.getSeconds();
+                                //console.log('seg '+seg);
+                                //console.log('timer '+minuto+':'+segundos);
+                                if(seg != segg){
+                                    segundos = segundos +1;
+                                    segg = seg;
                                 }
-                                console.log("afuera "+ segundos);
-                                if (parseInt(minu) > 0){
-                                    var adentroTemp = parseInt((parseInt((new Date - (start))) / 1000))-(60*(parseInt(parseInt((parseInt((new Date - (start))) / 1000)))%(parseInt(minu)+1)));
-                                    if(parseInt(adentroTemp) <= 60 ){
-                                        segundos = parseInt(adentroTemp);    
+                                if(segundos == '59') {
+                                    $('#timer').text(minuto.toString().padStart(2, "0")+":"+segundos.toString().padStart(2, "0") + " Seconds");
+                                    sleepFor(1000);
+                                    minuto = minuto + 1;
+                                    if(segundos == 59){
+                                        segundos = 0;
                                     }
-                                    console.log((60*(parseInt(parseInt((parseInt((new Date - (start))) / 1000)))%parseInt(minu))));
-                                    console.log("adentro "+ segundos);
                                 }
-                                $('#timer').text(minu+":"+segundos + " Seconds") },500);    
-                                if(minu > 3 ){
-                                    alert('Boommmm!');
-                                    $("#envi").submit();
+                                $('#timer').text(minuto.toString().padStart(2, "0")+":"+segundos.toString().padStart(2, "0") + " Seconds");
+                                console.log('minuto '+minuto);
+                                if(minuto > 3){
+                                    $("#envi").click();
                                 }
+                                },500);
+                                
                             </script>'''
                 print(dicRespuestas)
             except socket.error as error:
