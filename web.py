@@ -120,10 +120,16 @@ if __name__ == '__main__':
                 print(datosResumen)
                 listaMensaje = []
                 listaMensaje = datosResumen.split('&')
+                print(listaMensaje)
                 dicMensaje = {}
+                print(dicMensaje)
                 for valor in listaMensaje:
-                    keyValue = valor.split("=")
+                    keyValue = valor.split(":")
+                    print(keyValue[0]+'-'+keyValue[1])
                     dicMensaje[keyValue[0]]=keyValue[1]
+                    print ("dicMensaje")
+                    print (dicMensaje)
+                print (dicMensaje)
                 index = '''
                         <!DOCTYPE html>
                         <html>
@@ -134,7 +140,7 @@ if __name__ == '__main__':
                             <script src="mi.js"></script>
                         </head>
                         <body class = "container" >
-                            <div class="card container">
+                            <div class="card container center-block" style="margin-top: 10%;">
                                     Sr. o Sra. {0}, obtuvo una puntuaci&oacute;n de {1} puntos.
                             </div>
                         </body>
