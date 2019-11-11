@@ -8,7 +8,10 @@
 ####   3.- ejecutar.
 ######    docker run --name <nombre-container> -e POSTGRES_PASSWORD=secret -p 5432:5432 -d <nombre-imagen>:<tag-version>
 ####   4.- Lista la BD.
-####   5.- ejecutar los archivos web.py, web_db.py y web_db_resumen.
+####   5.- ejecutar los archivos.
+###### web.py 
+###### web_db.py
+###### web_db_resumen.py
 ####   6.- una vez todo eso en ejecucion http://localhost:2501 desde algun browser
 
-# Att. Erikson Rodriguez
+######## Att. Erikson Rodriguez
