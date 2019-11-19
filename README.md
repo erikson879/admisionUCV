@@ -1,5 +1,5 @@
 # admisionUCV
-# El proyecto esta conformado por tres servidores socket interconectados archivos de gui para presentacion al usuario y postgres en imagen docker...
+# El proyecto esta conformado por tres servidores socket interconectados, archivos gui para presentacion al usuario y postgres en imagen docker...
 
 #  para utilizar del Dockerfile
 ####   1.- Ubicar en el directorio proyecto 
